@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B00D4C21390AD60006ABB38 /* EquationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B00D4C11390AD60006ABB38 /* EquationBar.m */; };
+		7B0E581C139580250071A512 /* Header.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B0E581B139580250071A512 /* Header.png */; };
+		7B0E581F139580560071A512 /* Pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B0E581E139580560071A512 /* Pin.png */; };
+		7B1AB087139577D0006850A8 /* Copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B1AB085139577D0006850A8 /* Copy.png */; };
+		7B1AB088139577D0006850A8 /* Paste.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B1AB086139577D0006850A8 /* Paste.png */; };
+		7B29980413958BFD009AA6F3 /* TexEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B29980313958BFD009AA6F3 /* TexEditor.m */; };
+		7B2AE8C51390F06200D7294C /* Toolbar.conf in Resources */ = {isa = PBXBuildFile; fileRef = 7B2AE8C41390F06200D7294C /* Toolbar.conf */; };
+		7B42747D1394B1F00039D25E /* PrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B42747C1394B1F00039D25E /* PrefsController.m */; };
+		7B473D03138D687500C13B44 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B473D02138D687500C13B44 /* Localizable.strings */; };
+		7B5E010613938CB600104AEC /* TNLocalizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5E010513938CB600104AEC /* TNLocalizer.m */; };
+		7B71D74713BFB6800025620F /* EquaTeX.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7B71D74613BFB6800025620F /* EquaTeX.icns */; };
+		7B9DDA3A13922F23000CE7FF /* PreviewBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9DDA3913922F23000CE7FF /* PreviewBox.m */; };
+		7BB71EF3138963240096BC60 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB71EF2138963240096BC60 /* Cocoa.framework */; };
+		7BB71F12138963970096BC60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB71F10138963970096BC60 /* AppDelegate.m */; };
+		7BB71F13138963970096BC60 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BB71F11138963970096BC60 /* MainMenu.xib */; };
+		7BC6DE00138D6F5D006C71DA /* TexEquation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6DDFF138D6F5D006C71DA /* TexEquation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7B00D4C01390AD60006ABB38 /* EquationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquationBar.h; sourceTree = "<group>"; };
+		7B00D4C11390AD60006ABB38 /* EquationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquationBar.m; sourceTree = "<group>"; };
+		7B0E581B139580250071A512 /* Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Header.png; path = res/Header.png; sourceTree = "<group>"; };
+		7B0E581E139580560071A512 /* Pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pin.png; path = res/Pin.png; sourceTree = "<group>"; };
+		7B1AB085139577D0006850A8 /* Copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Copy.png; path = res/Copy.png; sourceTree = "<group>"; };
+		7B1AB086139577D0006850A8 /* Paste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Paste.png; path = res/Paste.png; sourceTree = "<group>"; };
+		7B29980213958BFD009AA6F3 /* TexEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TexEditor.h; sourceTree = "<group>"; };
+		7B29980313958BFD009AA6F3 /* TexEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TexEditor.m; sourceTree = "<group>"; };
+		7B2AE8C41390F06200D7294C /* Toolbar.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Toolbar.conf; sourceTree = "<group>"; };
+		7B42747B1394B1F00039D25E /* PrefsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefsController.h; sourceTree = "<group>"; };
+		7B42747C1394B1F00039D25E /* PrefsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefsController.m; sourceTree = "<group>"; };
+		7B473D02138D687500C13B44 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		7B5E010413938CB600104AEC /* TNLocalizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNLocalizer.h; sourceTree = "<group>"; };
+		7B5E010513938CB600104AEC /* TNLocalizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNLocalizer.m; sourceTree = "<group>"; };
+		7B71D74613BFB6800025620F /* EquaTeX.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = EquaTeX.icns; path = res/EquaTeX.icns; sourceTree = "<group>"; };
+		7B9DDA3813922F23000CE7FF /* PreviewBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewBox.h; sourceTree = "<group>"; };
+		7B9DDA3913922F23000CE7FF /* PreviewBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewBox.m; sourceTree = "<group>"; };
+		7BB71EEE138963240096BC60 /* EquaTeX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EquaTeX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BB71EF2138963240096BC60 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7BB71EF5138963240096BC60 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7BB71EF6138963240096BC60 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7BB71EF7138963240096BC60 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7BB71F0F138963970096BC60 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7BB71F10138963970096BC60 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7BB71F11138963970096BC60 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		7BB71F14138963AF0096BC60 /* EquaTeX.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EquaTeX.plist; sourceTree = "<group>"; };
+		7BC6DDFE138D6F5D006C71DA /* TexEquation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TexEquation.h; sourceTree = "<group>"; };
+		7BC6DDFF138D6F5D006C71DA /* TexEquation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TexEquation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BB71EEB138963240096BC60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB71EF3138963240096BC60 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BB71EE3138963230096BC60 = {
+			isa = PBXGroup;
+			children = (
+				7B29980213958BFD009AA6F3 /* TexEditor.h */,
+				7B29980313958BFD009AA6F3 /* TexEditor.m */,
+				7B5E010413938CB600104AEC /* TNLocalizer.h */,
+				7B5E010513938CB600104AEC /* TNLocalizer.m */,
+				7BB71F0F138963970096BC60 /* AppDelegate.h */,
+				7BB71F10138963970096BC60 /* AppDelegate.m */,
+				7B42747B1394B1F00039D25E /* PrefsController.h */,
+				7B42747C1394B1F00039D25E /* PrefsController.m */,
+				7B00D4C01390AD60006ABB38 /* EquationBar.h */,
+				7B00D4C11390AD60006ABB38 /* EquationBar.m */,
+				7B9DDA3813922F23000CE7FF /* PreviewBox.h */,
+				7B9DDA3913922F23000CE7FF /* PreviewBox.m */,
+				7BC6DDFE138D6F5D006C71DA /* TexEquation.h */,
+				7BC6DDFF138D6F5D006C71DA /* TexEquation.m */,
+				7BEEB1EE1395771600023FD0 /* Resources */,
+				7BB71EF1138963240096BC60 /* Frameworks */,
+				7BB71EEF138963240096BC60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BB71EEF138963240096BC60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BB71EEE138963240096BC60 /* EquaTeX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BB71EF1138963240096BC60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BB71EF2138963240096BC60 /* Cocoa.framework */,
+				7BB71EF4138963240096BC60 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BB71EF4138963240096BC60 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BB71EF5138963240096BC60 /* AppKit.framework */,
+				7BB71EF6138963240096BC60 /* CoreData.framework */,
+				7BB71EF7138963240096BC60 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7BEEB1EE1395771600023FD0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7B0E581E139580560071A512 /* Pin.png */,
+				7B0E581B139580250071A512 /* Header.png */,
+				7B1AB085139577D0006850A8 /* Copy.png */,
+				7B1AB086139577D0006850A8 /* Paste.png */,
+				7BB71F11138963970096BC60 /* MainMenu.xib */,
+				7B71D74613BFB6800025620F /* EquaTeX.icns */,
+				7B473D02138D687500C13B44 /* Localizable.strings */,
+				7B2AE8C41390F06200D7294C /* Toolbar.conf */,
+				7BB71F14138963AF0096BC60 /* EquaTeX.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BB71EED138963240096BC60 /* EquaTeX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BB71F0C138963240096BC60 /* Build configuration list for PBXNativeTarget "EquaTeX" */;
+			buildPhases = (
+				7BB71EEA138963240096BC60 /* Sources */,
+				7BB71EEB138963240096BC60 /* Frameworks */,
+				7BB71EEC138963240096BC60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EquaTeX;
+			productName = EquaTeX;
+			productReference = 7BB71EEE138963240096BC60 /* EquaTeX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BB71EE5138963230096BC60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = TCKnetwork;
+			};
+			buildConfigurationList = 7BB71EE8138963230096BC60 /* Build configuration list for PBXProject "EquaTeX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7BB71EE3138963230096BC60;
+			productRefGroup = 7BB71EEF138963240096BC60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BB71EED138963240096BC60 /* EquaTeX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BB71EEC138963240096BC60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB71F13138963970096BC60 /* MainMenu.xib in Resources */,
+				7B473D03138D687500C13B44 /* Localizable.strings in Resources */,
+				7B2AE8C51390F06200D7294C /* Toolbar.conf in Resources */,
+				7B1AB087139577D0006850A8 /* Copy.png in Resources */,
+				7B1AB088139577D0006850A8 /* Paste.png in Resources */,
+				7B0E581C139580250071A512 /* Header.png in Resources */,
+				7B0E581F139580560071A512 /* Pin.png in Resources */,
+				7B71D74713BFB6800025620F /* EquaTeX.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BB71EEA138963240096BC60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB71F12138963970096BC60 /* AppDelegate.m in Sources */,
+				7BC6DE00138D6F5D006C71DA /* TexEquation.m in Sources */,
+				7B00D4C21390AD60006ABB38 /* EquationBar.m in Sources */,
+				7B9DDA3A13922F23000CE7FF /* PreviewBox.m in Sources */,
+				7B5E010613938CB600104AEC /* TNLocalizer.m in Sources */,
+				7B42747D1394B1F00039D25E /* PrefsController.m in Sources */,
+				7B29980413958BFD009AA6F3 /* TexEditor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7BB71F0A138963240096BC60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+			};
+			name = Debug;
+		};
+		7BB71F0B138963240096BC60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+			};
+			name = Release;
+		};
+		7BB71F0D138963240096BC60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = EquaTeX.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7BB71F0E138963240096BC60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = EquaTeX.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BB71EE8138963230096BC60 /* Build configuration list for PBXProject "EquaTeX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB71F0A138963240096BC60 /* Debug */,
+				7BB71F0B138963240096BC60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BB71F0C138963240096BC60 /* Build configuration list for PBXNativeTarget "EquaTeX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BB71F0D138963240096BC60 /* Debug */,
+				7BB71F0E138963240096BC60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BB71EE5138963230096BC60 /* Project object */;
+}

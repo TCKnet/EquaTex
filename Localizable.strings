@@ -1,0 +1,65 @@
+/* Localizable.strings -- EquaTeX */
+
+/* Menu */
+"About EquaTeX"      = "A propos d'EquaTeX";
+"Preferences…"       = "Préférences…";
+"Hide EquaTeX"       = "Masquer EquaTeX";
+"Hide Others"        = "Masquer les autres";
+"Show All"           = "Tout afficher";
+"Quit EquaTeX"       = "Quitter EquaTeX";
+
+"File"               = "Fichier";
+"New equation"       = "Nouvelle équation";
+"Open…"              = "Ouvrir…";
+"Open recent"        = "Ouvrir l'élément récent";
+"Save"               = "Enregistrer";
+"Save As…"           = "Enregistrer sous…";
+
+"Edit"               = "Edition";
+"Cut"                = "Couper";
+"Copy"               = "Copier";
+"Paste"              = "Coller";
+
+"View"               = "Présentation";
+"Show Toolbar"       = "Masquer la barre d'outils";
+"Customize Toolbar…" = "Personnaliser la barre d'outils…";
+
+"Window"             = "Fenêtre";
+"Minimize"           = "Placer dans le Dock";
+"Zoom"               = "Réduire/Agrandir";
+"Bring All to Front" = "Tout ramener au premier plan";
+
+"Help"               = "Aide";
+"EquaTeX Help"       = "Aide d'EquaTeX";
+
+/* Toolbar */
+"Mode"        = "Affichage";
+"ModeDisplay" = "Normal";
+"ModeInline"  = "En ligne";
+"ModeArray"   = "Tableau";
+"ModeAlign"   = "Aligné";
+"ModeText"    = "Texte";
+"ModeAlgo"    = "Algorithme";
+"Symbols"     = "Symboles";
+"Options"     = "Options";
+"OptTop"      = "Toujours au premier plan";
+"OptHeader"   = "Afficher le prologue";
+"OptReload"   = "Regénérer l'équation";
+"OptCopy"     = "Copier";
+"OptPaste"    = "Coller";
+"Colors"      = "Couleurs";
+"Size"        = "Taille";
+
+/* Preferences */
+"TexBinPaths" = "Chemin du processeur TeX";
+"Cancel"      = "Annuler";
+"Apply"       = "OK";
+
+
+/* Misc */
+"ConfirmNew"  = "Voulez-vous commencer une nouvelle équation ? L'équation précédente sera perdue.";
+"StatusDone"  = "Terminé.";
+
+// Symbol palettes names
+"Algebra" = "Algèbre";
+"Logic"   = "Logique";
