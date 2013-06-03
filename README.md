@@ -13,7 +13,7 @@ have, let me know, or better, provide a patch ;)
   * LaTeXiT: http://www.chachatelier.fr/latexit
 
 #### Screenshot
-![Screen Capture](res/ScreenCap.jpg "Screen Capture")
+![Screen Capture](res/ScreenCap.png "Screen Capture")
 
 #### License
 Copyright (c) 2011-2013, Thierry Coppey.
