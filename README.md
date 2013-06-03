@@ -12,7 +12,10 @@ have, let me know, or better, provide a patch ;)
   * MathType: http://www.dessci.com/en/products/mathtype_mac
   * LaTeXiT: http://www.chachatelier.fr/latexit
 
-#### Licenses
+#### Screenshot
+![Screen Capture](res/ScreenCap.jpg "Screen Capture")
+
+#### License
 Copyright (c) 2011-2013, Thierry Coppey.
 All rights reserved. Available under BSD license.
   * http://opensource.org/licenses/BSD-2-Clause
@@ -20,3 +23,4 @@ All rights reserved. Available under BSD license.
 Application main icon based on: c55inator, available under CC BY-NC-SA 3.0
   * http://c55inator.deviantart.com/art/Chalkboard-178083932
   * http://creativecommons.org/licenses/by-nc-sa/3.0/
+
