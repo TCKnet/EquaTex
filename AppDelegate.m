@@ -42,15 +42,19 @@ int main(int argc, char *argv[]) {
 - (void)loadPrefs {
 	NSUserDefaults* def = [NSUserDefaults standardUserDefaults];
 	// Special default values
+	
 	if (![def objectForKey:@"mode"]) [def setInteger:1 forKey:@"mode"];
 	if (![def objectForKey:@"size"]) [def setDouble:11.0 forKey:@"size"];
 	if (![def objectForKey:@"zoom"]) [def setDouble:2.0 forKey:@"zoom"];
 	if (![def objectForKey:@"highlight"]) [def setBool:YES forKey:@"highlight"];
+	if (![def objectForKey:@"fontname"]) [def setObject:@"Courier" forKey:@"fontname"];
+	if (![def objectForKey:@"fontsize"]) [def setDouble:13.0 forKey:@"fontsize"];
 
 	// Load preferences
 	[_teq setProcessor:[def boolForKey:@"xelatex"] latex:[def stringForKey:@"path_la"]
 					xetex:[def stringForKey:@"path_xe"] gs:[def stringForKey:@"path_gs"]];
-	[editor setHighlight:[def boolForKey:@"highlight"]];
+	editor.highlight=[def boolForKey:@"highlight"];
+	editor.font=[NSFont fontWithName:[def stringForKey:@"fontname"] size:[def doubleForKey:@"fontsize"]];
 	[popMode selectItemAtIndex:[def integerForKey:@"mode"]];
 	NSUInteger set = [def integerForKey:@"bar_set"]; [popSymbols selectItemAtIndex:set]; [bar selectSet:set];
 	[txtSize setStringValue:[NSString stringWithFormat:@"%.fpt",[def doubleForKey:@"size"]]];
@@ -60,10 +64,6 @@ int main(int argc, char *argv[]) {
 		[self performSelector:@selector(preview:) withObject:self];
 		[bar generateSymbols:_teq];
 	}
-
-	// XXX: load more
-	// - font face
-
 }
 
 - (void)savePrefs {
@@ -72,6 +72,9 @@ int main(int argc, char *argv[]) {
 	[def setInteger:[popSymbols indexOfSelectedItem] forKey:@"bar_set"];
 	[def setDouble:[txtSize doubleValue] forKey:@"size"];
 	[def setDouble:[boxPreview zoom]forKey:@"zoom"];
+	[def setBool:editor.highlight forKey:@"highlight"];
+	[def setObject:editor.font.fontName forKey:@"fontname"];
+	[def setDouble:editor.font.pointSize forKey:@"fontsize"];
 	[def synchronize];
 }
 
@@ -108,16 +111,11 @@ int main(int argc, char *argv[]) {
 	// XXX: setup keyboard shortcuts for equations / for calling application at frontmost (?)
 
 	// Insert code here to initialize your application
-	[editor setFont:[NSFont fontWithName:@"Courier" size:13]]; // @"Courier Bold Oblique"
 
 	// XXX: [editor setInsertionPointColor:[NSColor redColor]];
 	
-	
-	editor.string = @"%Some sample equation\nx^2=3 \\models \\sum_{i=0}^{\\infty^{3^{3^{3^{3}}}}}\\sin(f(x))";
+	//editor.string = @"%Some sample equation\nx^2=3 \\models \\sum_{i=0}^{\\infty^{3^{3^{3^{3}}}}}\\sin(f(x))";
 	//editor.string = @"Some {\\fontspec{STSong} 你好} Chinese.";
-
-	
-	
 	
 	// {\color[rgb]{%1.3f,%1.3f,%1.3f} text foo}
 
@@ -166,8 +164,12 @@ int main(int argc, char *argv[]) {
 		case 4: m=TexModeAlgo; break;
 		default: m=TexModeText; break;
 	}
-	NSArray* a = [NSArray arrayWithObjects:editor.string, [NSNumber numberWithInt:m], [NSNumber numberWithDouble:[txtSize doubleValue]], nil];
-	[NSThread detachNewThreadSelector:@selector(genThread:) toTarget:self withObject:a];
+	if (editor.string.length==0) [boxPreview setData:nil];
+	else {
+		_teq.color=editor.color;
+		NSArray* a = [NSArray arrayWithObjects:editor.string, [NSNumber numberWithInt:m], [NSNumber numberWithDouble:[txtSize doubleValue]], nil];
+		[NSThread detachNewThreadSelector:@selector(genThread:) toTarget:self withObject:a];
+	}
 }
 
 // ---------------------------------------------------------------------------
@@ -176,6 +178,8 @@ int main(int argc, char *argv[]) {
 - (void)texPreview:(TexEditor*)ed { [self preview:ed]; }
 - (void)texCopy:(TexEditor*)ed { [_teq copy:[boxPreview baseline]]; }
 - (NSString*)texPaste:(TexEditor*)ed { return [_teq paste]; }
+
+- (IBAction)copyEquation:(id)sender { [self texCopy:editor]; }
 
 - (IBAction)setSymbols:(id)sender { [bar selectSet:[popSymbols indexOfSelectedItem]]; }
 - (IBAction)setOption:(NSSegmentedControl*)options {
@@ -187,6 +191,7 @@ int main(int argc, char *argv[]) {
 	if ([options isSelectedForSegment:3]) { [options setSelected:NO forSegment:3]; [self texCopy:editor]; } // Copy
 	if ([options isSelectedForSegment:4]) { [options setSelected:NO forSegment:4];
 		NSString* str = [_teq paste]; if (str) editor.string=str; // XXX: fix Paste
+		[editor colorize];
 	}
 }
 
@@ -194,6 +199,7 @@ int main(int argc, char *argv[]) {
 	// XXX: improve => better handling of cursor
 	[editor insertText:str];
 }
+
 
 // ---------------------------------------------------------------------------
 #pragma mark -
@@ -206,9 +212,7 @@ int main(int argc, char *argv[]) {
 }
 
 - (void)openDocument:(id)sender {
-
 	// XXX: save if unsaved ?
-	
 	NSOpenPanel *open=[NSOpenPanel openPanel];
 	open.treatsFilePackagesAsDirectories=NO;
 	open.allowsMultipleSelection=NO;
@@ -218,7 +222,7 @@ int main(int argc, char *argv[]) {
 	[open beginSheetModalForWindow:window completionHandler:^(NSInteger result) {
 		if (result != NSOKButton) return; [open orderOut:self];
 		NSString* eq = [_teq load:[[open URL] path]]; if (eq!=nil) editor.string=eq;
-		// XXX: recolorize
+		[editor colorize];
 	}];
 }
 

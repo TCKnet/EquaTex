@@ -62,9 +62,7 @@
 	if (pgs) [pathGs setStringValue:pgs];
 	BOOL xe=[_defs boolForKey:@"xelatex"]; [useLa setState:!xe]; [useXe setState:xe];
 	[chkHighlight setState:[_defs boolForKey:@"highlight"]];
-
-	// XXX: load preferences
-
+	// load preferences
 	[NSApp beginSheet:pane modalForWindow:window modalDelegate:self didEndSelector:@selector(sheetDidEnd:code:info:) contextInfo:nil];
 }
 
@@ -75,9 +73,7 @@
 	[_defs setObject:[pathGs stringValue] forKey:@"path_gs"];
 	[_defs setBool:[useXe state] forKey:@"xelatex"];
 	[_defs setBool:[chkHighlight state] forKey:@"highlight"];
-
-	// XXX: save preferences
-
+	// save preferences
 	[_defs synchronize];
 	[NSApp endSheet:pane returnCode:1];
 }
@@ -92,17 +88,6 @@
 	if ([[pathXe stringValue] length]==0) xe=NO;
 	[useLa setState:!xe];
 	[useXe setState:xe];
-}
-
-- (void)setFont:(id)sender {
-	NSLog(@"Set font");
-}
-
-- (IBAction)openFont:(id)sender {
-	[[NSFontManager sharedFontManager] orderFrontFontPanel:self];
-
-	// XXX: then what ?
-
 }
 
 - (IBAction)browse:(id)sender {

@@ -17,10 +17,14 @@ typedef enum { TexModeDisplay, TexModeInline, TexModeArray, TexModeAlign, TexMod
 	NSRect _size;  // PDF size
 
 	BOOL _xetex;
-	NSString* _la;
-	NSString* _xe;
-	NSString* _gs;
+	NSString* _la; // LaTeX path
+	NSString* _xe; // XeTeX path
+	NSString* _gs; // GhostScript path
+	
+	NSColor* _col; // default color
 }
+
+@property (retain)IBOutlet NSColor* color;
 
 - (void)setProcessor:(BOOL)xetex latex:(NSString*)laPath xetex:(NSString*)xePath gs:(NSString*)gsPath;
 - (BOOL)hasProcessor;

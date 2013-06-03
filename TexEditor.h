@@ -19,12 +19,16 @@
 	NSDictionary* _aCmd; // commands \[a-z0-9]+
 	NSDictionary* _aMat; // (), [] \{ \} _ ^
 
+	NSColor* _col; // default color
+	
 	NSTimer* timer;
 	NSObject<TexEditorDelegate>* delegate;
 }
 
 @property (retain) NSObject<TexEditorDelegate>* delegate;
 @property (assign)BOOL highlight;
+@property (readonly) NSColor* color;
+- (void)colorize;
 @end
 
 @protocol TexEditorDelegate <NSObject>

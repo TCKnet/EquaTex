@@ -103,8 +103,13 @@ static inline int level(double z) { int l=0; while (l<ZMAX && z>zoom_level[l]+0.
 
 - (void)setData:(NSArray*)data {
 	if (img) [img release];
-	img = [[data objectAtIndex:0] copy];
-	baseAuto = [[data objectAtIndex:1] doubleValue];
+	if (data==nil) {
+		img=nil;
+		baseAuto=0;
+	} else {
+		img = [[data objectAtIndex:0] copy];
+		baseAuto = [[data objectAtIndex:1] doubleValue];
+	}
 	if (baseAuto>=0) { [btnAuto setState:1]; [btnAuto setEnabled:YES]; }
 	else { [btnAuto setState:0]; [btnAuto setEnabled:NO]; }
 	[self setZoomLevel:self];

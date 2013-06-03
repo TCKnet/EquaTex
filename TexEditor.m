@@ -13,6 +13,7 @@
 
 @implementation TexEditor
 @synthesize delegate;
+@synthesize color=_col;
 @dynamic highlight;
 
 - (void)awakeFromNib {
@@ -37,18 +38,19 @@
 	[_aBrk release];
 	[_aKey release];
 	[_aMat release];
+	if (_col) [_col release];
 	[super dealloc];
 }
-
 
 - (void)changeFont:(id)sender {
 	[self setFont:[sender convertFont:[self font]]];
 }
 
 - (void)changeColor:(id)sender {
-	NSLog(@"Color");
-	// XXX
-	[super changeColor:sender];
+	//[super changeColor:sender];
+	if (_col) [_col release];
+	_col = [[sender color] retain];
+	[self textDidChange];
 }
 
 - (void)colorize:(NSRange)range {

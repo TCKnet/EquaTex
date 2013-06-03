@@ -77,6 +77,7 @@ static const char* Pages09Template = "<?xml version=\"1.0\"?>"
 // -----------------------------------------------------------------------------------
 
 @implementation TexEquation
+@synthesize color=_col;
 
 - (id)init {
 	self = [super init];
@@ -211,6 +212,12 @@ static const char* Pages09Template = "<?xml version=\"1.0\"?>"
 	NSString* proc = _xetex ? _xe : _la;
 	NSString* head = [NSString stringWithFormat:@"\\documentclass[%fpt]{article}\n%@\\usepackage[usenames]{color}\n\\usepackage{algorithm,algorithmic}\n\\usepackage[normalem]{ulem}\n\\usepackage{cancel}\n\\usepackage{esint}\n",stdSize ? size : 10,
 							_xetex ? @"\\usepackage{fontspec}\n\\usepackage{amsmath}\n" : @"\\usepackage{amssymb,amsmath}\n\\usepackage[utf8]{inputenc}\n"];
+	
+	if (_col!=nil) {
+		CGFloat c[4]; [_col getRed:c+0 green:c+1 blue:c+2 alpha:c+3];
+		eq_pre = [NSString stringWithFormat:@"\\definecolor{myequationcolor}{rgb}{%f,%f,%f}\n\\color{myequationcolor}\n%@",c[0],c[1],c[2],eq_pre];
+	}
+		
 	NSString* text = [NSString stringWithFormat:@"%@\\usepackage[papersize={2000pt,1000pt},margin=0pt]{geometry}\n\\pagestyle{empty}\n\\begin{document}\n%@%@%@\n\\end{document}\n",head,eq_pre,eq,eq_post];
 	if (!stdSize && (mode==TexModeInline || mode==TexModeText)) { // Special font sizes
 		head = [head stringByAppendingString:@"\\usepackage{graphicx}\n"];

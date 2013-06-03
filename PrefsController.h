@@ -39,7 +39,6 @@
 - (IBAction)browse:(id)sender;
 - (IBAction)cancel:(id)sender;
 - (IBAction)download:(id)sender;
-- (IBAction)openFont:(id)sender;
 - (IBAction)setProcessor:(id)sender;
 
 @end

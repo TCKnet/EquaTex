@@ -18,6 +18,7 @@
 "Edit"               = "Edition";
 "Cut"                = "Couper";
 "Copy"               = "Copier";
+"Copy Equation"      = "Copier l'équation";
 "Paste"              = "Coller";
 
 "View"               = "Présentation";
@@ -52,6 +53,7 @@
 
 /* Preferences */
 "TexBinPaths" = "Chemin du processeur TeX";
+"SyntaxColor" = "Coloration syntaxique";
 "Cancel"      = "Annuler";
 "Apply"       = "OK";
 

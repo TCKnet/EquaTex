@@ -43,5 +43,6 @@
 - (IBAction)setSymbols:(id)sender;
 - (IBAction)setOption:(NSSegmentedControl*)options;
 
+- (IBAction)copyEquation:(id)sender;
 
 @end
